@@ -4,19 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casino</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animations.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="row">
-        <h1>Caligula Casino</h1>
-        <h3>Money: <span class="money-box">$0:00</span>USD</h3>
-    </div>
+    <main class="main" >
+
+        <div class="row">
+            <h1>Caligula Casino</h1>
+            <h3>Money: <span class="money-box">$0:00</span>USD</h3>
+        </div>
+        
+    
+        <h2>Result: <span class="result">--</span></h2>
+    
+       
+        <div class="buttons-container">
+            <button class="roll-btn" data-price="0.50" >Tirar: <strong>$0.50</strong></button>
+            <button class="roll-btn" data-price="1.50" >Tirar: <strong>$1:50</strong></button>
+            <button class="roll-btn" data-price="3.00" >Tirar: <strong>$3:00</strong></button>
+        </div>
+       
+       
+
+    </main>   
+
+    <footer class="footer" >
+        <ul>
+            <li>Pre-Alfa v0.0003</li>
+            <li>(Early Access)</li>
+        </ul>
+        
+        
+    </footer>
     
 
-    <h2>Result: <span class="result">--</span></h2>
-
-    <button class="roll-btn" >Let's Roll!</button>
-
-    <script src="./script.js" ></script>
+    <script type="module" src="./js/script.js" ></script>
+    <script type="module" src="./js/animations.js" ></script>
 </body>
 </html>
