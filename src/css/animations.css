@@ -1,0 +1,24 @@
+:root {
+    --animation-duration: .1s;
+}
+
+@keyframes press-button-anim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Classes */
+
+.press-button-anim {
+    animation-name: press-button-anim;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}

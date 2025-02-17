@@ -3,11 +3,10 @@
 // 2- Result: String
 // 3- rollPrice: Number
 
+import { results } from "../interfaces/types"
 
-export const calculateNewBalance = (currentBalance, result, rollPrice) => {
-    console.log("currentBalance:", currentBalance)   
-    console.log("result:", result)   
-    console.log("rollPrice:", rollPrice)   
+export const calculateNewBalance = (currentBalance:number, result:results, rollPrice:number) => {
+      
     if(result === "Ganaste!") {
         return currentBalance += (rollPrice);
     } else {
