@@ -1,4 +1,4 @@
-import { calculateNewBalance } from "./newBalance.js"
+import { calculateNewBalance } from "../Backend/newBalance.js"
 
 const rollBtnCollection = document.querySelectorAll(".roll-btn")
 const resultBox = document.querySelector(".result")
