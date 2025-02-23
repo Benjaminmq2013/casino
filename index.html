@@ -18,17 +18,32 @@
     <main class="main" >
 
         <div class="row">
-            <h1 class="logo" >Caligula Casino</h1>
-            <h3 class="balance" ><img class="balance__image" src="public/assets/coin.png" /> <span class="money-box">$0:00</span> USD</h3>
+            <h1 class="logo" > <img src="/public/assets/icons/logo.png" alt=""> Caligula Casino</h1>
+            <h3 class="balance" ><img class="balance__image" src="public/assets/coin.png" /> $<span class="money-box">0:00</span> USD</h3>
         </div>
         
     
-        <h2>Result: <span class="result">--</span></h2>
+        <h2 class="multiplier" ><span class="result">--</span></h2>
     
         <div class="cards__container" >
+           <div class="card__scroll">
+               <div class="card" >0</div>
+               <div class="card" >0</div>
+               <div class="card" >0</div>
+           </div>
+
+           <div class="card__scroll">
             <div class="card" >0</div>
             <div class="card" >0</div>
             <div class="card" >0</div>
+        </div>
+
+        <div class="card__scroll">
+            <div class="card" >0</div>
+            <div class="card" >0</div>
+            <div class="card" >0</div>
+        </div>
+            
         </div>
        
         <div class="buttons-container">
@@ -38,7 +53,13 @@
         </div>
        
        
+        <video class="audio__theme" controls muted autoplay  >
+            <source src="https://soundcloud.com/benjamin-martinez-415747426/gta-mashup/s-D79Lpmw2HeA?in=benjamin-martinez-415747426/sets/casino-app/s-GRSyMkzEJfh&si=c16e52eb249e4186bb64dcb228bd25a3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing.mp3" type="audio/mpeg">
+        </video>
 
+        <video class="audio__sfx" controls  >
+            <source src="public/audio/sfx/money-effect-lite.mp3" type="audio/mpeg">
+        </video>
     </main>   
 
     <footer class="footer" >
@@ -53,5 +74,6 @@
 
     <script type="module" src="./dist/ts/index.js" ></script>
     <script type="module" src="./dist/ts/animations.js" ></script>
+    <script type="module" src="./dist/ts/audio.js" ></script>
 </body>
 </html>

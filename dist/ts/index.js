@@ -1,6 +1,7 @@
 "use strict";
 import { letsRoll } from "../Backend/play.js";
 import { initialBalance } from "../Backend/userInfo.js";
+import { playSFX } from "./soundEffects.js";
 const rollBtnCollection = document.querySelectorAll(".roll-btn");
 const resultBox = document.querySelector(".result");
 const moneyBox = document.querySelector(".money-box");
@@ -13,7 +14,14 @@ rollBtnCollection.forEach(button => {
     });
 });
 const setResult = (newBalance, message) => {
+    let resultMessage = "--";
+    if (message === "Match1")
+        resultMessage = "X2";
+    else if (message === "Match2")
+        resultMessage = "X5";
     moneyBox.innerHTML = `${newBalance.toFixed(2)}`;
-    resultBox.innerHTML = `${message}`;
+    resultBox.innerHTML = `${resultMessage}`;
+    if (message !== "Pierdes!")
+        playSFX.win();
 };
 setResult(initialBalance, "--");

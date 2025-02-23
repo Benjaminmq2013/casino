@@ -9,24 +9,40 @@ body {
     padding: 20px;
     max-width: 450px;
     margin-inline: auto;
+    margin-bottom: 78.8px;
+    background-image: url("/public/assets/images/game-background.png");
+    background-position: 37% 0%;
 }
 
 
 h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Patua One", sans-serif;
     font-weight: 400;
 }
 
+.multiplier {
+    text-align: center;
+}
+
 .logo {
-    color: #E46565;
+    color: #F9D93D;
+    display: flex;
+    align-items: center;
+    margin-top:0;
+}
+
+.logo img {
+    height: 34px;
+    margin-right: 8px;
 }
 
 .balance {
-    color: #EAB30C;
+    color: #FFC825;
     display: flex;
     align-items: center;
+    margin-top: 0;
 }
 
 .balance__image {
@@ -64,16 +80,24 @@ h1 {
 }
 
 
+.audio__theme {
+    height: 88px;
+    width: 100%;
+}
+
 
 /* Start of Cards component */
 
     .cards__container {
         display: flex;
         justify-content: space-between;
-        border: 4px solid #F3DA5C;
+        border: 6px solid #F5CD4C;
         border-radius: 12px;
+
+        position: relative;
         padding: 7px 9px;
     }
+
 
     .card {
         height: 158px;

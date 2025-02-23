@@ -1,2 +1,1 @@
-export let initialBalance = 5;
-export let currentBalance = initialBalance;
+export let initialBalance = 100;
