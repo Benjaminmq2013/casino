@@ -3,7 +3,7 @@ const cardsTemplate = () => {
     let template = "";
     for (let i = 0; i < 11; i++) {
         template = template +
-            `<div class="card"> <img class="slot__image" src="/public/assets/artworks/image-item-${i + 1}.png" /> </div>`;
+            `<div class="card"> <img class="slot__image" src="public/assets/artworks/image-item-${i + 1}.png" /> </div>`;
     }
     return template;
 };
