@@ -10,7 +10,7 @@ body {
     max-width: 450px;
     margin-inline: auto;
     margin-bottom: 78.8px;
-    background-image: url("/public/assets/images/game-background.png");
+    background-image: url("public/assets/images/game-background.png");
     background-position: 37% 0%;
     min-height: calc(100vh - 78.857px)
     
