@@ -23,57 +23,50 @@
         </div>
         
     
-        <h2 class="multiplier" ><span class="result">--</span></h2>
-    
-        <div class="cards__container" >
-           <div class="card__scroll">
-               <div class="card" >0</div>
-               <div class="card" >0</div>
-               <div class="card" >0</div>
-           </div>
-
-            <div class="card__scroll">
-                <div class="card" >0</div>
-                <div class="card" >0</div>
-                <div class="card" >0</div>
-            </div>
-
-            <div class="card__scroll">
-                <div class="card" >0</div>
-                <div class="card" >0</div>
-                <div class="card" >0</div>
-            </div>
-            
+        <h2 class="multiplier --glow" ><span class="result">--</span></h2>
+        
+        <div class="dark-shadow --glow">
+            <div class="cards__container" >
+                <div class="card__scroll"></div>
+     
+                 <div class="card__scroll"></div>
+     
+                 <div class="card__scroll"></div>
+                 
+             </div>
         </div>
+        
        
-        <div class="buttons-container">
-            <button class="roll-btn" data-price="0.50" >Tirar: <strong>$0.50</strong></button>
-            <button class="roll-btn" data-price="1.50" >Tirar: <strong>$1:50</strong></button>
-            <button class="roll-btn" data-price="3.00" >Tirar: <strong>$3:00</strong></button>
+        <div class="buttons-container --glow">
+            <button class="roll-btn button-primary selected" data-price="0.50" ><strong>$0.50</strong></button>
+            <button class="roll-btn button-secondary" data-price="1.50" ><strong>$1:50</strong></button>
+            <button class="roll-btn button-tertiary" data-price="3.00" ><strong>$3:00</strong></button>
         </div>
        
        
-        <video class="audio__theme" controls muted autoplay  >
+        <video class="audio__theme" muted autoplay  >
             <source src="https://benjaminmq2013.github.io/audio/theme/gta-mashup.mp3" type="audio/mpeg">
         </video>
 
-        <video class="audio__sfx" controls  >
+        <video class="audio__sfx"  >
             <source src="public/audio/sfx/money-effect-short.mp3" type="audio/mpeg">
         </video>
     </main>   
 
     <footer class="footer" >
-        <ul>
-            <li>Pre-Alfa v0.0005</li>
-            <li>(Early Access)</li>
-        </ul>
-        
-        
+        <div class="wrapper">
+            <ul class="row">
+                <li><img class="footer__icon" src="/public/assets/icons/crown.png" alt="">(Early Access)</li>
+                
+            </ul>
+            <span class="footer__build" >Build v0.0008</span>
+        </div>
     </footer>
     
 
     <script type="module" src="./dist/ts/index.js" ></script>
     <script type="module" src="./dist/ts/animations.js" ></script>
-    <script type="module" src="./dist/ts/audio.js" ></script>
+    <script type="module" src="./dist/ts/music.js" ></script>
+    <script type="module" src="./dist/ts/UI.js" ></script>
 </body>
 </html>

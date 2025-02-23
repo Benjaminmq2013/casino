@@ -12,6 +12,8 @@ body {
     margin-bottom: 78.8px;
     background-image: url("/public/assets/images/game-background.png");
     background-position: 37% 0%;
+    min-height: calc(100vh - 78.857px)
+    
 }
 
 
@@ -62,63 +64,132 @@ h1 {
     margin-top: 40px;
     display: flex;
     align-items: space-between;
-
 }
 
-.buttons-container button {
+.buttons-container.--glow::after {
+    background-color: #181a1aa4;    
+}
+
+.buttons-container .roll-btn {
     padding: 10px;
     margin-inline: auto;
     width: 100%;
     border-radius: 5px;
-    border: none;
+    border: 2px transparent;
     animation-play-state: both;
+    font-size: 17px;
+    color: white;
 }
 
 
-.buttons-container button:nth-of-type(2) {
+.buttons-container .roll-btn:nth-of-type(2) {
     margin-inline: 15px;    
 }
 
+.buttons-container .button-primary {
+    background: #58D266;
+    background: linear-gradient(130deg, #58D266, #4CAA79);
+    border: 2px solid #D2FFD7;
+}
+
+.buttons-container .button-secondary {
+    background: #4A86E6;
+    background: linear-gradient(130deg, #4A86E6, #6948E1);
+    border: 2px solid #8AB2F1;
+}
+
+.buttons-container .button-tertiary {
+    background: #EAB30C;
+    background: linear-gradient(130deg, #EAB30C, #F29D3C);
+    border: 2px solid #FFDE7B;
+}
+
+.buttons-container .roll-btn.selected {
+    border-width: 3px;
+    font-weight: 900;
+}
 
 .audio__theme {
     height: 88px;
     width: 100%;
 }
 
+.multiplier {
+    color: #F3DA5B;
+    width: max-content;
+    text-align: center;
+    margin-inline: auto;
+}
+.--glow {
+    position: relative;
+    z-index: 1;
+}
+.--glow::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #F3DA5B;
+    z-index: -1;    
+    left: 0;
+    top: 0;
+    filter: blur(17px);
+}
 
 /* Start of Cards component */
 
-    .cards__container {
-        display: flex;
-        justify-content: space-between;
-        border: 6px solid #F5CD4C;
-        border-radius: 12px;
+.cards__container {
+    display: flex;
+    justify-content: space-between;
+    border: 6px solid #F5CD4C;
+    border-radius: 12px;
 
-        position: relative;
-        padding: 7px 9px;
-        max-height: 158px;
-        overflow: hidden;
-    }
+    position: relative;
+    padding: 7px 9px;
+    max-height: 158px;
+    overflow: hidden;
+}
+
+.dark-shadow {
+    box-shadow: 0px 0px 118px rgba(0, 0, 0, 0.346);
+}
+.dark-shadow.--glow::after {
+    background-color: #181a1a38;  
+   
+}
+
+.slot__image {
+    height: 100%;
+}
 
 
-    .card {
-        height: 158px;
-        max-width: 100px;
-        border: 2px solid purple;
-        border-radius: 12px;
-        width: 100%;
+.card {
+    height: 155px;
+    max-width: 100px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    width: calc(100% - 2px);
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        font-size: 20px;
-        font-weight: 600;
-    }
+    font-size: 20px;
+    font-weight: 600;
+}
 
-    .card:nth-of-type(2) {
-        margin-inline: 5px;
-    }
+.card__scroll {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.card__scroll:nth-of-type(2) {
+    margin-inline: 10px;
+}
+
+
+
 
 /* End of Cards component */
 
@@ -128,16 +199,16 @@ h1 {
 /* Start of Footer */
 
 .footer {
-    background-color: rgb(181, 54, 206);
+    background: rgb(132,0,247);
+    background: linear-gradient(320deg, rgba(132,0,247,1) 0%, rgba(108,127,250,1) 50%, rgba(196,36,236,1) 100%);
     color: white;
     font-size: 16px;
-    font-weight: 600;
-    padding-block: 20px;
-    margin-top: auto;
-
-    position: fixed;
+    font-weight: 600;    
     bottom: 0;
     width: 100%;
+    position: fixed;
+    min-height: 83px;
+    max-width: 490px;
 }
 
 .footer ul {
@@ -152,6 +223,36 @@ h1 {
     list-style: none;
     margin: 0;
     width: 100%;
+}
+
+.footer .wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    min-height: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__build {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 11px;
+}
+
+.footer__icon {
+    width: 22px;
+    height: 19px;
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 490px) {
+    .footer {
+        left: calc(50% - 245px);
+    }
 }
 
 /* End of Footer */
