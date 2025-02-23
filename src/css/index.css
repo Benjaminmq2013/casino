@@ -96,6 +96,8 @@ h1 {
 
         position: relative;
         padding: 7px 9px;
+        max-height: 158px;
+        overflow: hidden;
     }
 
 
